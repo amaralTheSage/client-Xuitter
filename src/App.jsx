@@ -6,11 +6,13 @@ function App() {
       id: 1,
       user: "Daniel1234",
       post: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab laboriosam odio molestiae dolor fugit mollitia, unde dicta, ipsam architecto sint magni assumenda cum minus, laudantium iste eos? Blanditiis, esse.",
+      createAt: "12:40",
     },
     {
       id: 2,
       user: "Sergio",
       post: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ab laboriosam odio molestiae dolor fugit mollitia, unde dicta, ipsam architecto sint magni assumenda cum minus, laudantium iste eos? Blanditiis, esse.",
+      createAt: "12:40",
     },
   ];
 
@@ -19,10 +21,11 @@ function App() {
       <Header />
 
       <main>
-        <form className="border-[#66708195] border m-auto w-[70%] min-h-24 flex rounded-md mt-8 flex-col py-2 px-3 items-end gap-1">
+        <form className="border-[#66708195] border m-auto w-[70%] min-h-24 flex rounded-md mt-8 flex-col  px-3 items-end gap-1">
           <input
             type="text"
-            className=" w-full min-h-12 bg-inherit relative placeholder:absolute placeholder:top-1 placeholder:text-black placeholder:font-semibold"
+            className=" w-full min-h-12 bg-inherit relative placeholder:absolute placeholder:top-4 placeholder:text-black placeholder:font-semibold
+            outline-none appearance-none"
             placeholder="No que está pensando?"
           />
           <button
@@ -46,7 +49,7 @@ function App() {
                 <div className="flex justify-between">
                   <span className="font-semibold text-xl ">{p.user}</span>
 
-                  <span>12:40</span>
+                  <span>{p.createAt}</span>
                 </div>
                 <p className="text-sm">{p.post}</p>
               </li>
